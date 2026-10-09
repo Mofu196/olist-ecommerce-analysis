@@ -1,0 +1,26 @@
+ # 原始数据
+data/raw/
+
+# 大文件（不上传GitHub）
+data/clean/olist_clean.csv
+data/clean/order_level.csv
+data/clean/orders_clean.csv
+data/clean/items_clean.csv
+data/clean/customers_clean.csv
+data/clean/payments_clean.csv
+data/clean/reviews_clean.csv
+data/clean/products_clean.csv
+data/clean/Abnormal_order.csv
+
+# Power BI临时文件
+*.pbix~
+*.tmp
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# 系统文件
+.DS_Store
+Thumbs.db

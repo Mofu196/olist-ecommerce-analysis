@@ -1,0 +1,5 @@
+﻿payment_type,orders,pct,avg_payment
+credit_card,73933,76.64,182.3
+boleto,19190,19.89,176.33
+voucher,1861,1.93,121.0
+debit_card,1483,1.54,149.2
