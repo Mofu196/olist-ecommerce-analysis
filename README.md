@@ -49,3 +49,44 @@
 ![数据清洗流程](images/data_cleaning_flow.png)
 
 ## 项目结构
+olist-ecommerce-analysis/
+├── data/
+│ └── clean/
+│ └── exported/ # 分析结果CSV（已上传）
+│ ├── monthly_gmv.csv
+│ ├── dau.csv
+│ ├── mau.csv
+│ ├── new_old_customers.csv
+│ ├── payment_type.csv
+│ ├── category_gmv.csv
+│ ├── category_bad_review.csv
+│ ├── state_late_rate.csv
+│ ├── delivery_bucket.csv
+│ ├── late_vs_ontime.csv
+│ ├── rfm_segment.csv
+│ └── rfm_segment_summary.csv
+├── notebooks/ # Python清洗与分析
+│ ├── 01_clean.ipynb
+│ ├── 02_merge.ipynb
+│ └── 03_export.ipynb
+├── sql/ # SQL分析脚本
+│ ├── 01_operations.sql
+│ ├── 02_customer.sql
+│ ├── 03_product.sql
+│ └── 04_delivery_impact.sql
+├── powerbi/ # Power BI看板
+│ └── Olist.pbix
+├── reports/ # 分析报告
+│ └── Olist分析报告.pdf
+├── images/ # 看板截图与流程图
+│ ├── 1-经营总览.jpg
+│ ├── 2-客户行为.jpg
+│ ├── 3-客户价值.jpg
+│ ├── 4-品类与商品.jpg
+│ ├── 5-配送与差评.jpg
+│ ├── er_diagram.png
+│ └── data_cleaning_flow.png
+├── .gitignore
+└── README.md
+
+> 注：原始数据（`data/raw/`）和清洗后的大宽表（`olist_clean.csv`）体积较大，未上传至仓库，运行项目前请先按“如何运行”章节下载并生成。
