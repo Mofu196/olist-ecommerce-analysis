@@ -50,43 +50,43 @@
 
 ## 项目结构
 olist-ecommerce-analysis/
-├── data/
-│ └── clean/
-│ └── exported/ # 分析结果CSV（已上传）
-│ ├── monthly_gmv.csv
-│ ├── dau.csv
-│ ├── mau.csv
-│ ├── new_old_customers.csv
-│ ├── payment_type.csv
-│ ├── category_gmv.csv
-│ ├── category_bad_review.csv
-│ ├── state_late_rate.csv
-│ ├── delivery_bucket.csv
-│ ├── late_vs_ontime.csv
-│ ├── rfm_segment.csv
-│ └── rfm_segment_summary.csv
-├── notebooks/ # Python清洗与分析
-│ ├── 01_clean.ipynb
-│ ├── 02_merge.ipynb
-│ └── 03_export.ipynb
-├── sql/ # SQL分析脚本
-│ ├── 01_operations.sql
-│ ├── 02_customer.sql
-│ ├── 03_product.sql
-│ └── 04_delivery_impact.sql
-├── powerbi/ # Power BI看板
-│ └── Olist.pbix
-├── reports/ # 分析报告
-│ └── Olist分析报告.pdf
-├── images/ # 看板截图与流程图
-│ ├── 1-经营总览.jpg
-│ ├── 2-客户行为.jpg
-│ ├── 3-客户价值.jpg
-│ ├── 4-品类与商品.jpg
-│ ├── 5-配送与差评.jpg
-│ ├── er_diagram.png
-│ └── data_cleaning_flow.png
-├── .gitignore
-└── README.md
-
+├── data/                      # 数据目录
+│   ├── clean/                 # 清洗后的数据
+│   │   └── exported/          # SQL/Python 导出的指标结果 CSV
+│   │       ├── monthly_gmv.csv
+│   │       ├── dau.csv
+│   │       ├── mau.csv
+│   │       ├── new_old_customers.csv
+│   │       ├── payment_type.csv
+│   │       ├── category_gmv.csv
+│   │       ├── category_bad_review.csv
+│   │       ├── state_late_rate.csv
+│   │       ├── delivery_bucket.csv
+│   │       ├── late_vs_ontime.csv
+│   │       ├── rfm_segment.csv
+│   │       └── rfm_segment_summary.csv
+│   └── raw/                   # 原始数据集（体积大，不上传 Git）
+├── notebooks/                 # Python Jupyter 代码
+│   ├── 01_clean.ipynb         # 数据清洗
+│   ├── 02_merge.ipynb         # 多表合并构建宽表
+│   └── 03_export.ipynb        # 导出指标数据
+├── sql/                       # SQL 分析脚本
+│   ├── 01_operations.sql      # 经营大盘 KPI
+│   ├── 02_customer.sql        # 用户 & 复购 & RFM 分析
+│   ├── 03_product.sql         # 品类 GMV、差评分析
+│   └── 04_delivery_impact.sql # 配送时效与差评关系
+├── powerbi/                   # PowerBI 看板文件
+│   └── Olist.pbix
+├── reports/                   # 项目分析报告
+│   └── Olist 分析报告.pdf
+├── images/                    # 看板截图、流程图
+│   ├── 1 - 经营总览.jpg
+│   ├── 2 - 客户行为.jpg
+│   ├── 3 - 客户价值.jpg
+│   ├── 4 - 品类与商品.jpg
+│   ├── 5 - 配送与差评.jpg
+│   ├── er_diagram.png
+│   └── data_cleaning_flow.png
+├── .gitignore                 # Git 忽略文件配置
+└── README.md                  # 项目说明文档
 > 注：原始数据（`data/raw/`）和清洗后的大宽表（`olist_clean.csv`）体积较大，未上传至仓库，运行项目前请先按“如何运行”章节下载并生成。
